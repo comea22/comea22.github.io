@@ -4,10 +4,10 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="m-0 px-4 bg-white shadow-[0_2px_8px_rgba(15,18,25,0.05)]">
-	<nav class="flex items-center justify-between">
-		<h2 class="m-0 text-base">
-			<a href="/" class="no-underline">{SITE_TITLE}</a>
-		</h2>
+	<nav class="flex items-center justify-center gap-36">
+		<a href="/" class="no-underline">
+			<img src="/logo.png" alt={SITE_TITLE} class="w-44" />
+		</a>
 		<div class="flex">
 			<HeaderLink href="/">首頁</HeaderLink>
 			<HeaderLink href="/blog">學習筆記</HeaderLink>
