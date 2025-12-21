@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
@@ -13,36 +14,36 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<img src="/main.webp" alt="主視覺" class="w-full rounded-lg mb-6 mt-16 md:mt-0" />
+			<h1 class="text-xl text-primary pb-2">啟程</h1>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
+				歡迎光臨，這裏是關於網頁開發的學習旅程，將一邊學習一邊把理解轉化成圖文筆記。如果內容中有錯誤，歡迎指教，也希望這些筆記能陪你一起在學習的路上走一小段路。
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<h1 class="text-primary text-xl font-semibold py-10 text-center">. . .</h1>
+			<h1 class="text-xl text-primary">散步地圖</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+				<Card
+					image="https://placehold.co/400x200/009291/white?text=前端"
+					title="前端"
+					description="Tailwind CSS / JavaScript / React"
+				/>
+				<Card
+					image="https://placehold.co/400x200/009291/white?text=後端"
+					title="後端"
+					description="API 與資料庫"
+				/>
+				<Card
+					image="https://placehold.co/400x200/009291/white?text=UIUX"
+					title="UIUX"
+					description="使用者介面與體驗設計"
+				/>
+				<Card
+					image="https://placehold.co/400x200/009291/white?text=心得分享"
+					title="心得分享"
+					description="什麼都分享"
+				/>
+			</div>
+	
 		</main>
 		<Footer />
 	</body>
