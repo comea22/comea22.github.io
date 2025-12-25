@@ -126,7 +126,7 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 					{
 						posts.map((post) => (
 							<li data-category={post.data.category || '未分類'} data-title={post.data.title.toLowerCase()}>
-								<a href={`/blog/${post.id}/`}>
+								<a href={`/notes/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={200} height={120} src={post.data.heroImage} alt="" />
 									)}
