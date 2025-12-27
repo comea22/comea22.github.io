@@ -157,11 +157,22 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 			const searchInput = document.getElementById('search-input') as HTMLInputElement;
 			const noPostsMessage = document.getElementById('no-posts-message');
 
-			let currentCategory = '全部';
+			const urlParams = new URLSearchParams(window.location.search);
+			const categoryFromUrl = urlParams.get('category');
+
+			let currentCategory = categoryFromUrl || '全部';
 			let currentSearch = '';
 
-			buttons[0]?.classList.remove('bg-white', 'text-primary');
-			buttons[0]?.classList.add('bg-primary', 'text-white');
+			buttons.forEach((btn) => {
+				const btnCategory = btn.getAttribute('data-category');
+				if (btnCategory === currentCategory) {
+					btn.classList.remove('bg-white', 'text-primary');
+					btn.classList.add('bg-primary', 'text-white');
+				} else {
+					btn.classList.remove('bg-primary', 'text-white');
+					btn.classList.add('bg-white', 'text-primary');
+				}
+			});
 
 			function filterPosts() {
 				let visibleCount = 0;
@@ -207,6 +218,8 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 				currentSearch = searchInput.value;
 				filterPosts();
 			});
+
+			filterPosts();
 		</script>
 	</body>
 </html>
