@@ -13,9 +13,9 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<div class="flex flex-col md:flex-row gap-8 items-center md:items-center">
+			<div class="flex flex-col md:flex-row gap-8 items-center md:items-cente md:mt-8">
 				<!-- 左邊：方形圖片 -->
-				<div class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0">
+				<div class="w-40 h-40 md:w-50 md:h-50 flex-shrink-0">
 					<img
 						src="/avatar.webp"
 						alt="個人照片"
@@ -23,10 +23,10 @@ import { SITE_TITLE } from '../consts';
 					/>
 				</div>
 				<div class="flex-1">
-					<h1 class="font-bold text-xl text-primary">
+					<h1 class="font-bold text-2xl text-primary text-center md:text-left">
 						Hello, it's Jae!
 					</h1>
-					<p class="leading-loose">
+					<p class="text-lg md:text-xl leading-relaxed">
 						產地艋舺，插畫研究所畢業後轉往網頁開發的小小旅人，希望將所學以插畫的方式整理成有趣的筆記。</p>
 						<div class="flex flex-col mt-2 gap-1">
 						<a href="https://github.com/comea22" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-primary hover:text-secondary transition-colors underline underline-offset-2">
@@ -49,23 +49,23 @@ import { SITE_TITLE } from '../consts';
 
 			<div class="grid grid-cols-1 gap-8 mt-12">
 				<div>
-					<h2 class="text-lg font-bold text-primary mb-4">其他技能</h2>
+					<h2 class="text-lg md:text-2xl font-bold text-primary mb-4">其他技能</h2>
 					<ul class="text-gray-dark space-y-4">
 						<li>
-							<span class="block font-semibold text-primary">Software</span>
+							<span class="block font-semibold text-primary">Design Tools</span>
 							Photoshop / Illustrator / Indesign / After Effects / Procreate
 						</li>
 						<li>
-							<span class="block font-semibold text-primary">Design</span>
+							<span class="block font-semibold text-primary">Creative Services</span>
 							展覽主視覺 / 海報設計 / LOGO 設計 / 包裝設計 / 書籍排版 / 印刷
 						</li>
 						<li>
-							<span class="block font-semibold text-primary">Arts</span>
+							<span class="block font-semibold text-primary">Others</span>
 							商業插畫 / 兒童繪本 / 手作精裝 / 剪紙 / 刺繡
 						</li>
 					</ul>
-					<a href="https://www.instagram.com/azhu.illu/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-primary rounded-xl border border-gray-200 shadow-md hover:bg-secondary hover:text-white transition-all mt-1.5">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<a href="https://www.instagram.com/azhu.illu/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-4 py-2 md:px-5 md:py-2.5 text-sm md:text-base text-primary rounded-2xl border border-gray-200 shadow-md hover:bg-secondary hover:text-white transition-all mt-1.5">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 									<rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
 									<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
 									<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
@@ -76,14 +76,14 @@ import { SITE_TITLE } from '../consts';
 	
 			</div>
 			<div class="mt-6">
-					<h2 class="text-lg font-bold text-primary mb-4">特殊經歷</h2>
+					<h2 class="text-lg md:text-2xl 、font-bold text-primary mb-4">特殊經歷</h2>
 					<ul class="text-gray-dark">
 					<li>具備馬桶維修經驗</li>
 					<li>精通台語，托福 iBT 92 分</li>
 					<li>
 							<p>不怕蟑螂，無法活捉，但善於消滅。</p>
-							<button id="open-modal" class="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-primary rounded-xl border border-gray-200 shadow-md hover:bg-secondary hover:text-white transition-all mt-1.5 cursor-pointer mb-4 md:mb-0">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<button id="open-modal" class="inline-flex items-center gap-1 px-4 py-2 md:px-5 md:py-2.5 text-sm md:text-base text-primary rounded-2xl border border-gray-200 shadow-md hover:bg-secondary hover:text-white transition-all mt-1.5 cursor-pointer mb-4 md:mb-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 									<path d="M12 20v-8"/>
 									<path d="M14.12 3.88 16 2"/>
 									<path d="M15 7.13V6a3 3 0 0 0-5.14-2.1L8 2"/>
@@ -105,7 +105,7 @@ import { SITE_TITLE } from '../consts';
 
 		<!-- Modal -->
 		<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80">
-			<div class="relative bg-white rounded-xl shadow-lg py-6 px-8 mx-4 max-w-md text-center">
+			<div class="relative bg-white rounded-2xl shadow-lg py-6 px-8 mx-4 max-w-md text-center">
 				<button id="close-modal" class="absolute top-3 right-3 text-gray hover:text-primary transition-colors cursor-pointer">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

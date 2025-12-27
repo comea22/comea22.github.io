@@ -61,7 +61,7 @@ main {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
-	padding: 8em 1em 3em 1em;
+	padding: 6em 1em 3em 1em;
 	flex-grow: 1;
 }
 h1,

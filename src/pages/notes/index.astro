@@ -102,7 +102,7 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 							type="text"
 							id="search-input"
 							placeholder="搜尋文章標題"
-							class="bg-white w-full px-4 py-2 pl-10 border border-gray-200 rounded-xl shadow-md focus:outline-none focus:border-primary"
+							class="bg-white w-full px-4 py-2 pl-10 border border-gray-200 rounded-2xl shadow-md focus:outline-none focus:border-primary"
 						/>
 						<svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -114,7 +114,7 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 				<div class="flex flex-wrap gap-2 mb-6 md:mb-8 justify-center">
 					{categories.map((cat) => (
 						<button
-							class="category-btn inline-flex items-center justify-center px-3 py-1.5 bg-white text-primary rounded-xl border border-gray-200 shadow-md hover:bg-secondary hover:text-white hover:shadow-lg transition-all"
+							class="category-btn inline-flex items-center justify-center px-3 py-1.5 bg-white text-primary rounded-2xl border border-gray-200 shadow-md hover:bg-secondary hover:text-white hover:shadow-lg transition-all"
 							data-category={cat}
 						>
 							{cat}
@@ -146,7 +146,12 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 						))
 					}
 				</ul>
-				<p id="no-posts-message" class="hidden text-center text-gray py-8">目前這個類別還沒有文章噢～</p>
+				<div id="no-posts-message" class="hidden flex-col items-center text-center text-gray py-8">
+					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+						<path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/>
+					</svg>
+					<p>目前這個類別還沒有文章噢～</p>
+				</div>
 			</section>
 		</main>
 		<Footer />
@@ -194,8 +199,10 @@ const categories = ['全部', '前端', '後端', 'UIUX', '其他'];
 
 				if (visibleCount === 0) {
 					noPostsMessage?.classList.remove('hidden');
+					noPostsMessage?.classList.add('flex');
 				} else {
 					noPostsMessage?.classList.add('hidden');
+					noPostsMessage?.classList.remove('flex');
 				}
 			}
 
