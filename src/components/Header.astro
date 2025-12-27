@@ -3,7 +3,7 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 px-4 bg-white shadow-[0_2px_8px_rgba(15,18,25,0.05)]">
+<header class="fixed top-0 left-0 right-0 z-50 px-6 md:px-4 bg-white shadow-[0_2px_8px_rgba(15,18,25,0.05)]">
 	<nav class="flex items-center justify-between md:justify-center md:gap-36">
 		<a href="/" class="no-underline">
 			<img src="/logo.webp" alt={SITE_TITLE} class="w-44" />
@@ -12,7 +12,7 @@ import HeaderLink from './HeaderLink.astro';
 		<!-- 漢堡按鈕（手機版） -->
 		<button id="menu-toggle" class="md:hidden p-2 text-primary" aria-label="開啟選單">
 			<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+				<path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
 			</svg>
 		</button>
 
